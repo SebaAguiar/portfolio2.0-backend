@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { AdminModule } from './admin/admin.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CertificateModule } from './certificate/certificate.module';
+import { WorkModule } from './work/work.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { CertificateModule } from './certificate/certificate.module';
       },
     ),
     CertificateModule,
+    WorkModule,
   ],
   controllers: [AppController],
   providers: [AppService],
