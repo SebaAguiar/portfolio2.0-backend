@@ -1,8 +1,9 @@
 import { Document } from 'mongoose';
 
 export interface AdminInterface extends Document {
-  readonly lastName: string;
-  readonly names: string;
-  readonly email: string;
+  id?: string;
+  lastName: string;
+  names: string;
+  email: string;
   password: string;
 }

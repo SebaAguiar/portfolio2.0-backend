@@ -15,16 +15,6 @@ import { AdminService } from './admin.service';
 @Controller('admin')
 export class AdminController {
   constructor(private adminService: AdminService) {}
-  @Post('/')
-  async CreateAdmin(@Res() res, @Body() createAdminDTO: CreateAdminDTO) {
-    console.log(createAdminDTO);
-    const admin = await this.adminService.postAdmin(createAdminDTO);
-    console.log('controler', admin);
-    return res.status(HttpStatus.OK).json({
-      message: 'recieved',
-      admin,
-    });
-  }
 
   @Get('/')
   async GetAdmins(@Res() res) {
@@ -41,6 +31,15 @@ export class AdminController {
     if (!admin) throw new NotFoundException('admin not found');
     return res.status(HttpStatus.OK).json({
       message: 'admin',
+      admin,
+    });
+  }
+
+  @Post('/')
+  async CreateAdmin(@Res() res, @Body() createAdminDTO: CreateAdminDTO) {
+    const admin = await this.adminService.postAdmin(createAdminDTO);
+    return res.status(HttpStatus.OK).json({
+      message: 'recieved',
       admin,
     });
   }
