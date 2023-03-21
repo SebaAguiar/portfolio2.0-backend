@@ -70,6 +70,9 @@ export class CertificateController {
       console.log('ERROR POST CERT');
       console.log(error);
       console.log('ERROR POST CERT');
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        message: 'Error, sorry...',
+      });
     }
   }
 
@@ -93,6 +96,9 @@ export class CertificateController {
       console.log('ERROR PUT CERTIFICATE');
       console.log(error);
       console.log('ERROR PUT CERTIFICATE');
+      return res.status(HttpStatus.INTERNAL_SERVER_ERROR).json({
+        message: 'Error, sorry...',
+      });
     }
   }
 }
