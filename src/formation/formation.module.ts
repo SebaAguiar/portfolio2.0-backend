@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FormationSchema } from './schemas/formation.schema';
+import { FormationService } from './formation.service';
 import { FormationController } from './formation.controller';
 
 @Module({
@@ -12,7 +13,7 @@ import { FormationController } from './formation.controller';
       },
     ]),
   ],
+  providers: [FormationService],
   controllers: [FormationController],
-  providers: [FormationController],
 })
 export class FormationModule {}
