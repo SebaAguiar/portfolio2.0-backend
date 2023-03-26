@@ -11,6 +11,9 @@ export const FormationSchema = new Schema(
     company: {
       type: String,
     },
+    companyUrl: {
+      type: String,
+    },
     dateFrom: {
       type: Date,
       default: Date.now(),

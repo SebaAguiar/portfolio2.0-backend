@@ -7,4 +7,5 @@ export interface WorkInterface extends Document {
   dateTo: string;
   company: string;
   position: string;
+  companyUrl: string;
 }

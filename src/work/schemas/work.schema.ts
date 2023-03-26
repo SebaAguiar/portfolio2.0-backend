@@ -8,16 +8,23 @@ export const WorkSchema = new Schema(
     name: {
       type: String,
     },
+    projectUrl: {
+      type: String,
+    },
+    stack: {
+      type: Array(String),
+    },
     company: {
+      type: String,
+    },
+    companyUrl: {
       type: String,
     },
     dateFrom: {
       type: Date,
-      default: Date.now(),
     },
     dateTo: {
       type: Date,
-      default: Date.now(),
     },
     description: {
       type: String,

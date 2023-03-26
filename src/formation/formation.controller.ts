@@ -35,7 +35,7 @@ export class FormationController {
   }
 
   @Get('/:id')
-  async GetFormation(@Res() res, @Param() id) {
+  async GetFormation(@Res() res, @Param() { id }) {
     try {
       const form = await this.formationService.getFormation(id);
       if (!form) throw new NotFoundException('formation not found');
@@ -79,7 +79,7 @@ export class FormationController {
   @Put('/:id')
   async PutFormation(
     @Res() res,
-    @Param() id,
+    @Param() { id },
     @Body() createFormationDTO: CreateFormationDTO,
   ) {
     try {
