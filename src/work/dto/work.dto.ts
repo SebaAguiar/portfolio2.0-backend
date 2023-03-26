@@ -5,4 +5,5 @@ export class CreateWorkDTO {
   readonly dateTo: string;
   readonly company: string;
   readonly position: string;
+  readonly companyUrl: string;
 }

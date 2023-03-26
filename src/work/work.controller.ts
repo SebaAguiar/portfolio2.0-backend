@@ -19,10 +19,11 @@ export class WorkController {
   @Get('/')
   async GetWorks(@Res() res) {
     try {
-      const work = await this.workService.getWorks();
+      const works = await this.workService.getWorks();
+      console.log(works);
       return res.status(HttpStatus.OK).json({
         message: 'works',
-        work,
+        works,
       });
     } catch (error) {
       console.log('ERROR GET WORKS');
@@ -35,8 +36,9 @@ export class WorkController {
   }
 
   @Get('/:id')
-  async GetWork(@Res() res, @Param() id) {
+  async GetWork(@Res() res, @Param() { id }) {
     try {
+      console.log(id);
       const work = await this.workService.getWork(id);
       if (!work) throw new NotFoundException('work not found');
       return res.status(HttpStatus.OK).json({
@@ -72,7 +74,11 @@ export class WorkController {
   }
 
   @Put('/:id')
-  async PutWork(@Res() res, @Param() id, @Body() createWorkDTO: CreateWorkDTO) {
+  async PutWork(
+    @Res() res,
+    @Param() { id },
+    @Body() createWorkDTO: CreateWorkDTO,
+  ) {
     try {
       const work = await this.workService.putWork(id, createWorkDTO);
       if (!work) throw new NotFoundException('work not found');
