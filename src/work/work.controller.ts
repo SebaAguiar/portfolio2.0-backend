@@ -20,7 +20,6 @@ export class WorkController {
   async GetWorks(@Res() res) {
     try {
       const works = await this.workService.getWorks();
-      console.log(works);
       return res.status(HttpStatus.OK).json({
         message: 'works',
         works,
@@ -83,7 +82,7 @@ export class WorkController {
       const work = await this.workService.putWork(id, createWorkDTO);
       if (!work) throw new NotFoundException('work not found');
       return res.status(HttpStatus.OK).json({
-        message: 'Work updated successfully',
+        message: `${work.name} updated successfully`,
         work,
       });
     } catch (error) {
