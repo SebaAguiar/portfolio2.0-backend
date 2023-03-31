@@ -12,7 +12,8 @@ export class WorkService {
   ) {}
 
   async getWorks(): Promise<WorkInterface[]> {
-    const work = await this.workModel.find({});
+    let work = await this.workModel.find({});
+    work = work.sort((a: any, b: any) => b.date - a.date);
     return work;
   }
 

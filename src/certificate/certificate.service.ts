@@ -12,7 +12,8 @@ export class CertificateService {
   ) {}
 
   async getCertificates(): Promise<CertificateInterface[]> {
-    const cert = await this.certificateModel.find({});
+    let cert = await this.certificateModel.find({});
+    cert = cert.sort((a: any, b: any) => b.date - a.date);
     return cert;
   }
 

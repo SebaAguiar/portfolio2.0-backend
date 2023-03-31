@@ -12,7 +12,8 @@ export class FormationService {
   ) {}
 
   async getFormations(): Promise<FormationInterface[]> {
-    const form = await this.formationModel.find({});
+    let form = await this.formationModel.find({});
+    form = form.sort((a: any, b: any) => b.date - a.date);
     return form;
   }
 

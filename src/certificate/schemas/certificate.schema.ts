@@ -8,7 +8,13 @@ export const CertificateSchema = new Schema(
     name: {
       type: String,
     },
+    certificateUrl: {
+      type: String,
+    },
     company: {
+      type: String,
+    },
+    companyUrl: {
       type: String,
     },
     date: {
