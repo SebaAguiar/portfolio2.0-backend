@@ -24,6 +24,10 @@ export const CertificateSchema = new Schema(
     image: {
       type: String,
     },
+    important: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: false,

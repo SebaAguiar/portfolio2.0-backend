@@ -6,4 +6,5 @@ export interface FormationInterface extends Document {
   dateFrom: string;
   dateTo: string;
   company: string;
+  companyUrl: string;
 }

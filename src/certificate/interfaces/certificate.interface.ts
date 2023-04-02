@@ -6,4 +6,7 @@ export interface CertificateInterface extends Document {
   date: string;
   company: string;
   image: string;
+  companyUrl: string;
+  certificateUrl: string;
+  important: boolean;
 }

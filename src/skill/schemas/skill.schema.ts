@@ -11,7 +11,7 @@ export const SkillSchema = new Schema(
     image: {
       type: String,
     },
-    description: {
+    component: {
       type: String,
     },
   },

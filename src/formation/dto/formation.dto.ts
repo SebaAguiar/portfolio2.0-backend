@@ -5,4 +5,5 @@ export class CreateFormationDTO {
   readonly dateFrom: string;
   readonly dateTo: string;
   readonly company: string;
+  readonly companyUrl: string;
 }
