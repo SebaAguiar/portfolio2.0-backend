@@ -32,6 +32,9 @@ export const WorkSchema = new Schema(
     position: {
       type: String,
     },
+    pepito: {
+      type: Number,
+    },
   },
   {
     timestamps: false,
