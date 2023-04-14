@@ -34,7 +34,7 @@ export class WorkController {
     }
   }
 
-  @Get('/:id')
+  @Get('/:id') //   localhost:3001/works/id
   async GetWork(@Res() res, @Param() { id }) {
     try {
       console.log(id);
