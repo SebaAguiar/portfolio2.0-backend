@@ -8,6 +8,7 @@ import { CertificateModule } from './certificate/certificate.module';
 import { WorkModule } from './work/work.module';
 import { FormationModule } from './formation/formation.module';
 import { SkillModule } from './skill/skill.module';
+import { AboutModule } from './about/about.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { SkillModule } from './skill/skill.module';
       useNewUrlParser: true,
       useUnifiedTopology: true,
     }),
+    AboutModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -77,7 +77,7 @@ export class CertificateController {
   }
 
   @Put('/:id')
-  async putCertificate(
+  async PutCertificate(
     @Res() res,
     @Param('id') id,
     @Body() createCertificateDTO: CreateCertificateDTO,
