@@ -14,7 +14,7 @@ export const AboutSchema = new Schema({
     type: Date,
   },
   residence: {
-    String,
+    type: String,
   },
   email: {
     type: String,
