@@ -35,9 +35,10 @@ export class SkillController {
   }
 
   @Get('/:id')
-  async GetSkill(@Res() res, @Param() id) {
+  async GetSkill(@Res() res, @Param() { id }) {
     try {
       const skill = await this.skillService.getSkill(id);
+      console.log('skill', skill);
       if (!skill) throw new NotFoundException('certificate not found');
       return res.status(HttpStatus.OK).json({
         message: `skill ${skill.name}`,
@@ -74,7 +75,7 @@ export class SkillController {
   @Put('/:id')
   async PutSkill(
     @Res() res,
-    @Param() id,
+    @Param() { id },
     @Body() createSkillDTO: CreateSkillDTO,
   ) {
     try {

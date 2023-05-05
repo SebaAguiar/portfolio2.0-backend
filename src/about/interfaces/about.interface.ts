@@ -1,3 +1,5 @@
+import { WhatIDoInterface } from './whatIDo.interface';
+
 export interface AboutInterface {
   id?: string;
   name: string;
@@ -7,4 +9,5 @@ export interface AboutInterface {
   email: string;
   phone: string;
   aboutme: string;
+  whatIDo: Array<WhatIDoInterface>;
 }
