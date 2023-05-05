@@ -11,8 +11,9 @@ export const SkillSchema = new Schema(
     image: {
       type: String,
     },
-    component: {
-      type: String,
+    type: {
+      type: ['Programming Lenguage', 'Backend', 'Frontend', 'Database', 'Tool'],
+      default: 'Backend',
     },
   },
   {

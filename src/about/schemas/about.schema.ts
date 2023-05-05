@@ -25,4 +25,20 @@ export const AboutSchema = new Schema({
   aboutMe: {
     type: String,
   },
+  whatIDo: [
+    {
+      imageLigth: {
+        type: String,
+      },
+      imageDark: {
+        type: String,
+      },
+      title: {
+        type: String,
+      },
+      description: {
+        type: String,
+      },
+    },
+  ],
 });
