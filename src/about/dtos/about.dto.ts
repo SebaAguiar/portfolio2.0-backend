@@ -1,4 +1,5 @@
 import { Document } from 'mongoose';
+import { WhatIDoInterface } from '../interfaces/whatIDo.interface';
 
 export class AboutDTO extends Document {
   id?: string;
@@ -9,4 +10,5 @@ export class AboutDTO extends Document {
   email: string;
   phone: string;
   aboutme: string;
+  whatIDo: WhatIDoInterface[];
 }

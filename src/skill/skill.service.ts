@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { SkillInterface } from './interfaces/skill.interface';
 import { CreateSkillDTO } from './dto/skill.dto';
+import { log } from 'console';
 
 @Injectable()
 export class SkillService {
